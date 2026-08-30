@@ -879,6 +879,21 @@ audio {
 	float:left;
 	width:100%;
 }
+.GC_slider_Wrappwer .slotholder:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+	background: rgba(0, 0, 0, .48);
+	pointer-events: none;
+}
+.GC_slider_Wrappwer .tp-caption {
+	color: #fff !important;
+	text-shadow: 0 2px 8px rgba(0, 0, 0, .7);
+}
 .gc_slider_content{
 	color:red !important;
 }
