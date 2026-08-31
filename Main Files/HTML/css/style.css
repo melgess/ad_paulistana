@@ -2175,7 +2175,7 @@ audio {
 /*-- GC com_event Wrapper End --*/
 /*-- GC testi_slider Wrapper Start --*/
 .gc_testi_slider_main_wrapper{
-	background:url('../images/content/testi_slider_bg.jpg') 50% 0 repeat-y;
+	background:url('../images/content/parabolas_bg.jpg') 50% 0 no-repeat;
 	width:100%;
 	height:100%;
 	float:left;
@@ -2651,7 +2651,7 @@ audio {
 /*-- GC filter Wrapper End --*/
 /*-- GC sermons Wrapper Start --*/
 .gc_sermons_main_wrapper{
-	background:url('../images/content/sermons_bg.jpg')50% 0 repeat-y;
+	background:url('../images/content/sermons_bg.jpg') 50% 0 repeat-y;
 	width:100%;
 	height:100%;
 	float:left;
