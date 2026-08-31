@@ -1650,7 +1650,7 @@ audio {
 /*-- GC recent slider Wrapper End --*/
 /*-- GC about story Wrapper Start --*/
 .gc_about_story_main_wrapper{
-	background:url('../images/content/about_bg.jpg') 50% 0 repeat-y;
+	
 	background-size:cover;
 	background-position:center 0;
 	float:left;
