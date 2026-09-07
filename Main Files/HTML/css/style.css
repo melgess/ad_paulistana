@@ -2761,7 +2761,7 @@ audio {
 /*-- GC filter Wrapper End --*/
 /*-- GC sermons Wrapper Start --*/
 .gc_sermons_main_wrapper{
-	background:url('../images/content/sermons_bg.jpg') 50% 0 repeat-y;
+	background:url('../images/content/youtube/bg.png') 50% 0 repeat-y;
 	width:100%;
 	height:100%;
 	float:left;
@@ -4287,6 +4287,206 @@ audio {
 	color:#ffffff;
 }
 /*-- GC map Wrapper End --*/
+.gc_biblical_blog_page{
+	padding:90px 0;
+	background:#f7f7f7;
+}
+.gc_biblical_article{
+	display:flex;
+	align-items:stretch;
+	margin-bottom:55px;
+	padding-top:30px;
+	background:#ffffff;
+	border:1px solid #e1e1e1;
+	box-shadow:0 8px 25px rgba(0, 70, 140, 0.08);
+	scroll-margin-top:90px;
+}
+.gc_biblical_article_image{
+	width:38%;
+	padding:0 0 30px 30px;
+}
+.gc_biblical_article_image img{
+	width:100%;
+	height:100%;
+	min-height:360px;
+	object-fit:cover;
+}
+.gc_biblical_article_content{
+	width:62%;
+	padding:5px 40px 35px;
+}
+.gc_biblical_article_label{
+	color:#e5ae49;
+	font-size:13px;
+	font-weight:bold;
+	letter-spacing:1px;
+	text-transform:uppercase;
+}
+.gc_biblical_article_content h2{
+	padding:8px 0 20px;
+	color:#00468c;
+	font-family:'Lato', sans-serif;
+	font-size:28px;
+}
+.gc_biblical_article_content blockquote{
+	margin:0 0 22px;
+	padding:18px 22px;
+	border-left:4px solid #e5ae49;
+	background:#f8f8f8;
+	color:#333333;
+	font-size:18px;
+	font-style:italic;
+	line-height:27px;
+}
+.gc_biblical_article_content blockquote span{
+	display:block;
+	padding-top:8px;
+	color:#00468c;
+	font-size:14px;
+	font-style:normal;
+	font-weight:bold;
+}
+.gc_biblical_article_content > p{
+	margin-bottom:15px;
+	line-height:25px;
+}
+.gc_biblical_back{
+	display:inline-block;
+	margin-top:10px;
+	color:#00468c;
+	font-weight:bold;
+}
+.gc_biblical_back:hover{
+	color:#e5ae49;
+}
+.gc_blog_legacy_content{
+	display:none !important;
+}
+.gc_blog_pages .cd-search,
+.gc_blog_pages #search_button,
+.gc_blog_pages #search_open{
+	display:none !important;
+}
+.gc_reflections_listing{
+	padding:85px 0 60px;
+	background:#f7f7f7;
+}
+.gc_reflections_intro{
+	max-width:720px;
+	margin:0 auto 42px;
+	text-align:center;
+}
+.gc_reflections_intro h2{
+	padding:8px 0 12px;
+	color:#00468c;
+	font-family:'Lato', sans-serif;
+	font-size:30px;
+}
+.gc_reflections_grid > div{
+	margin-bottom:30px;
+}
+.gc_reflection_card{
+	height:100%;
+	background:#ffffff;
+	border:1px solid #e1e1e1;
+	box-shadow:0 8px 25px rgba(0, 70, 140, 0.08);
+	transition:transform .25s ease, box-shadow .25s ease;
+}
+.gc_reflection_card:hover{
+	transform:translateY(-4px);
+	box-shadow:0 12px 30px rgba(0, 70, 140, 0.14);
+}
+.gc_reflection_card > a{
+	display:block;
+	overflow:hidden;
+}
+.gc_reflection_card img{
+	width:100%;
+	height:225px;
+	object-fit:cover;
+	transition:transform .3s ease;
+}
+.gc_reflection_card:hover img{
+	transform:scale(1.03);
+}
+.gc_reflection_card > div{
+	padding:25px 25px 28px;
+}
+.gc_reflection_card span{
+	color:#e5ae49;
+	font-size:13px;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+.gc_reflection_card h3{
+	min-height:58px;
+	padding:9px 0 10px;
+	font-size:21px;
+	line-height:28px;
+}
+.gc_reflection_card h3 a{
+	color:#00468c;
+}
+.gc_reflection_card p{
+	min-height:72px;
+	margin-bottom:17px;
+	line-height:24px;
+}
+.gc_reflection_more{
+	color:#00468c;
+	font-weight:bold;
+}
+.gc_reflection_more:hover{
+	color:#e5ae49;
+}
+.gc_article_navigation{
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	gap:15px;
+	margin-top:28px;
+	padding-top:22px;
+	border-top:1px solid #e1e1e1;
+}
+.gc_article_navigation a{
+	color:#00468c;
+	font-weight:bold;
+}
+.gc_article_navigation a:hover{
+	color:#e5ae49;
+}
+@media (max-width:767px){
+	.gc_biblical_article{
+		display:block;
+		padding-top:0;
+	}
+	.gc_biblical_article_image,
+	.gc_biblical_article_content{
+		width:100%;
+	}
+	.gc_biblical_article_image{
+		padding:0;
+	}
+	.gc_biblical_article_image img{
+		height:260px;
+		min-height:0;
+	}
+	.gc_biblical_article_content{
+		padding:28px 24px 32px;
+	}
+	.gc_reflections_listing{
+		padding:60px 0 35px;
+	}
+	.gc_reflection_card h3,
+	.gc_reflection_card p{
+		min-height:0;
+	}
+	.gc_article_navigation{
+		align-items:stretch;
+		flex-direction:column;
+		text-align:center;
+	}
+}
 /*-- GC footer Wrapper Start --*/
 .gc_footer_main_wrapper{
 	background:url('../images/content/footer_bg.jpg') 50% 0 repeat-y;
