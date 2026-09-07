@@ -502,6 +502,64 @@ $(window).load(function() {
      
         /* initialize shuffle plugin */
         var $grid = $('#gridWrapper');
+		var $galleryItems = $grid.find('.portfolio-wrapper');
+		var $loadMoreButton = $('#gallery-load-more');
+		var galleryPageSize = 6;
+		var galleryVisibleCount = galleryPageSize;
+		var activeGalleryGroup = 'all';
+
+		function getGalleryItems(groupName) {
+			if (groupName === 'all') {
+				var mixedItems = [];
+				var addedItems = [];
+				var galleryGroups = [];
+
+				$('#filter a').each(function() {
+					var filterGroup = $(this).attr('data-group');
+					if (filterGroup !== 'all') {
+						galleryGroups.push(filterGroup);
+					}
+				});
+
+				for (var itemIndex = 0; itemIndex < $galleryItems.length; itemIndex++) {
+					$.each(galleryGroups, function(_, filterGroup) {
+						var $groupItems = $galleryItems.filter(function() {
+							var groups = $(this).attr('data-groups') || '[]';
+							return $.inArray(filterGroup, JSON.parse(groups)) !== -1;
+						});
+						var groupItem = $groupItems.get(itemIndex);
+						if (groupItem && $.inArray(groupItem, addedItems) === -1) {
+							mixedItems.push(groupItem);
+							addedItems.push(groupItem);
+						}
+					});
+				}
+
+				$galleryItems.each(function() {
+					if ($.inArray(this, addedItems) === -1) {
+						mixedItems.push(this);
+					}
+				});
+
+				return $(mixedItems);
+			}
+
+			return $galleryItems.filter(function() {
+				var groups = $(this).attr('data-groups') || '[]';
+				return $.inArray(groupName, JSON.parse(groups)) !== -1;
+			});
+		}
+
+		function applyGalleryLimit() {
+			var $matchingItems = getGalleryItems(activeGalleryGroup);
+			$galleryItems.removeClass('gallery-load-hidden');
+			$matchingItems.slice(galleryVisibleCount).addClass('gallery-load-hidden');
+			$loadMoreButton.closest('.row').toggle(galleryVisibleCount < $matchingItems.length);
+		}
+
+		$grid.append(getGalleryItems('all'));
+		$galleryItems = $grid.find('.portfolio-wrapper');
+		applyGalleryLimit();
 
         $grid.shuffle({
             itemSelector: '.portfolio-wrapper' // the selector for the items in the grid
@@ -517,10 +575,20 @@ $(window).load(function() {
 
             // get group name from clicked item
             var groupName = $(this).attr('data-group');
+			activeGalleryGroup = groupName;
+			galleryVisibleCount = galleryPageSize;
+			applyGalleryLimit();
 
             // reshuffle grid
             $grid.shuffle('shuffle', groupName );
         });
+
+		$loadMoreButton.on('click', function(e) {
+			e.preventDefault();
+			galleryVisibleCount += galleryPageSize;
+			applyGalleryLimit();
+			$grid.shuffle('update');
+		});
     }
 });
 
@@ -538,7 +606,8 @@ $(window).load(function() {
 			image: {
 				tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
 				titleSrc: function(item) {
-					return item.el.attr('title') + '<small></small>';
+					var title = item.el.attr('title') || item.el.closest('.gc_filter_cont_overlay_wrapper').find('img').attr('alt') || 'Galeria AD Paulistana';
+					return title + '<small></small>';
 				}
 			}
 		});
@@ -688,4 +757,4 @@ try{initSocialSharing("348")} catch(e){}
 	
 	
 	});
-})(); 
+})();
