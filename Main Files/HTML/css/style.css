@@ -4843,6 +4843,57 @@ audio {
 		text-align:center;
 	}
 }
+.gc_about_legacy_content,
+.gc_about_page .tc_twtfd_wrapper,
+.gc_about_legacy_footer{
+	display:none !important;
+}
+.gc_about_page .gc_tittle_main_wrapper{display:none;}
+.gc_about_slogan{position:relative;padding:115px 0;background:linear-gradient(rgba(0,39,78,.78),rgba(0,39,78,.78)),url('../images/content/gallery/UMADPESP/480734654_2034716576950742_4783627292100389633_n.jpg') center center/cover no-repeat;color:#fff;text-align:center;}
+.gc_about_slogan p{margin-bottom:12px;color:#e5ae49;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;}
+.gc_about_slogan h1{max-width:900px;margin:0 auto;color:#fff;font-family:'Lato',sans-serif;font-size:39px;font-weight:700;line-height:51px;}
+.gc_about_home_footer{padding-top:70px;}
+.gc_about_identity,.gc_about_values,.gc_about_ministries{padding:95px 0;}
+.gc_about_identity_row{display:flex;align-items:center;}
+.gc_about_identity img{width:100%;height:520px;object-fit:cover;box-shadow:0 15px 35px rgba(0,70,140,.15);}
+.gc_about_section_heading span{color:#e5ae49;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;}
+.gc_about_section_heading h2{padding:8px 0 22px;color:#00468c;font-family:'Lato',sans-serif;font-size:34px;font-weight:700;}
+.gc_about_identity .gc_about_section_heading,.gc_about_identity .gc_about_section_heading~p{margin-left:35px;}
+.gc_about_identity p,.gc_ministry_content p{margin-bottom:16px;color:#555;font-size:16px;line-height:28px;}
+.gc_about_direction{padding:80px 0;background:#f5f7fa;}
+.gc_about_direction .row,.gc_about_values .row{display:flex;flex-wrap:wrap;}
+.gc_about_direction .row>div,.gc_about_values .row>div{display:flex;}
+.gc_about_direction_card{width:100%;padding:38px;background:#fff;border-top:4px solid #e5ae49;box-shadow:0 10px 28px rgba(0,70,140,.08);}
+.gc_about_direction_card>i{color:#e5ae49;font-size:34px;}
+.gc_about_direction_card h2{padding:15px 0;color:#00468c;font-size:28px;}
+.gc_about_direction_card p{font-size:16px;line-height:28px;}
+.gc_about_center{margin-bottom:42px;text-align:center;}
+.gc_about_value{width:100%;margin-bottom:30px;padding:30px 26px;border:1px solid #e6e6e6;background:#fff;text-align:center;}
+.gc_about_value i{color:#e5ae49;font-size:30px;}
+.gc_about_value h3{padding:15px 0 10px;color:#00468c;font-size:20px;}
+.gc_about_value p{line-height:24px;}
+.gc_about_ministries{background:#f5f7fa;}
+.gc_ministry_row{display:flex;align-items:stretch;margin-bottom:45px;background:#fff;box-shadow:0 12px 30px rgba(0,70,140,.09);}
+.gc_ministry_image,.gc_ministry_content{width:50%;}
+.gc_ministry_image img{width:100%;height:100%;min-height:470px;object-fit:cover;}
+.gc_ministry_content{padding:45px;}
+.gc_ministry_content>span{color:#e5ae49;font-weight:700;letter-spacing:1px;text-transform:uppercase;}
+.gc_ministry_content h2{padding:10px 0 20px;color:#00468c;font-size:30px;font-weight:700;}
+.gc_ministry_reverse{flex-direction:row-reverse;}
+@media(max-width:991px){
+	.gc_about_identity_row,.gc_ministry_row{display:block;}
+	.gc_about_identity img{height:390px;margin-bottom:35px;}
+	.gc_about_identity .gc_about_section_heading,.gc_about_identity .gc_about_section_heading~p{margin-left:0;}
+	.gc_ministry_image,.gc_ministry_content{width:100%;}
+	.gc_ministry_image img{min-height:0;height:390px;}
+}
+@media(max-width:767px){
+	.gc_about_slogan h1{font-size:29px;line-height:40px;}
+	.gc_about_identity,.gc_about_values,.gc_about_ministries{padding:65px 0;}
+	.gc_about_direction .row,.gc_about_values .row,.gc_about_direction .row>div,.gc_about_values .row>div{display:block;}
+	.gc_about_direction_card{margin-bottom:25px;}
+	.gc_ministry_content{padding:30px 24px;}
+}
 /*-- GC footer Wrapper Start --*/
 .gc_footer_main_wrapper{
 	background:#07182b;
@@ -5275,7 +5326,7 @@ audio {
 
 /*-- gc Tittle Wrapper Start --*/
 .gc_tittle_main_wrapper{
-	background:url('../images/content/about/title_img.jpg') 50% 0 repeat-y;
+	background:url('../images/content/gallery/UMADPESP/480734654_2034716576950742_4783627292100389633_n.jpg') 50% 0 repeat-y;
 	background-size:cover;
 	background-position:center 0;
 	float:left;
@@ -8439,3 +8490,7 @@ font-family: 'Droid Serif', serif;
 	}
 }
 /*-- Responsive css End --*/
+.gc_share_box{display:none !important;}
+#search_button,
+.gc_search_box{display:none !important;}
+.gc_right_menu > ul > li:nth-child(2){display:none !important;}
