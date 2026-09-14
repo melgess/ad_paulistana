@@ -730,6 +730,7 @@ try{initSocialSharing("348")} catch(e){}
 	  $(this).parent().addClass('active');
 	  var target = $('[section-scroll='+$(this).attr('href')+']');
 	  e.preventDefault();
+	  if (!target.length) return;
 	  var targetHeight = target.offset().top-parseInt('83', 10);
 	  $('html, body').animate({
 	   scrollTop: targetHeight
@@ -743,7 +744,7 @@ try{initSocialSharing("348")} catch(e){}
 	   $('[section-scroll]').each(function(i) {
 		if ($(this).position().top <= windscroll + 85) {
 		 target.removeClass('active');
-		 target.eq(i).addClass('active');
+		 target.find('a[href="'+$(this).attr('section-scroll')+'"]').parent().addClass('active');
 		}
 	   });
 	  }else{

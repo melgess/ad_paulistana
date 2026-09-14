@@ -8494,3 +8494,5 @@ font-family: 'Droid Serif', serif;
 #search_button,
 .gc_search_box{display:none !important;}
 .gc_right_menu > ul > li:nth-child(2){display:none !important;}
+/* Logo oficial: proporção preservada no cabeçalho desktop e móvel. */
+.gc_logo img{width:120px;height:80px;max-width:100%;object-fit:contain;}
