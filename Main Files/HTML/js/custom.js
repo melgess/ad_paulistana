@@ -2,9 +2,9 @@
   "use strict";
   
   // Preloader 
-	jQuery(window).on('load', function() {
+	jQuery(function() {
 		jQuery("#status").fadeOut();
-		jQuery("#preloader").delay(350).fadeOut("slow");
+		jQuery("#preloader").fadeOut(150);
 	});
 	
 	// on ready function
@@ -622,7 +622,7 @@ tpj(document).ready(function() {
 	}else{
 		revapi348 = tpj("#rev_slider_348_1").show().revolution({
 			sliderType:"standard",
-			jsFileLocation:"//server.local/revslider/wp-content/plugins/revslider/public/assets/js/",
+			jsFileLocation:"js/plugin/rs_slider/",
 			sliderLayout:"fullscreen",
 			dottedOverlay:"none",
 			delay:12000,

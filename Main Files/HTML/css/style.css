@@ -8496,3 +8496,6 @@ font-family: 'Droid Serif', serif;
 .gc_right_menu > ul > li:nth-child(2){display:none !important;}
 /* Logo oficial: proporção preservada no cabeçalho desktop e móvel. */
 .gc_logo img{width:120px;height:80px;max-width:100%;object-fit:contain;}
+/* A home aparece mesmo antes de os scripts e mídias terminarem de carregar. */
+body:has(#rev_slider_348_1) #preloader{display:none;}
+#rev_slider_348_1_wrapper{background:#142c42 url('../images/header/slider2_img.jpg') center/cover no-repeat !important;min-height:75vh;}

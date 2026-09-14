@@ -1,0 +1,3 @@
+# Instaladores não fazem parte dos arquivos do site.
+*.exe
+*.msi
