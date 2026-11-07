@@ -1,0 +1,20 @@
+DirectoryIndex index.html
+
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Força HTTPS
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Remove /index.html da URL
+    RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+    RewriteRule ^index\.html$ / [R=301,L]
+</IfModule>
+
+# Permissões padrão para arquivos
+<FilesMatch "\.(html|css|js|jpg|jpeg|png|gif|svg|webp|woff|woff2|ttf)$">
+    Require all granted
+</FilesMatch>
