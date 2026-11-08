@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nossas Igrejas | AD Paulistana</title>
+  <meta name="description" content="Encontre uma congregação da AD Paulistana. Pesquise por cidade, bairro ou CEP e veja endereços, responsáveis e como chegar.">
+  <link rel="icon" href="images/header/favicon.png">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/igrejas.css">
+  <script src="js/pastores-dados.js" defer></script>
+  <script src="js/igrejas-dados.js" defer></script>
+  <script src="js/igrejas.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#busca">Ir para a busca de igrejas</a>
+  <header class="church-header">
+    <a href="index.html" aria-label="AD Paulistana — Início"><img src="images/header/logo-oficial.png" alt="AD Paulistana" width="150" height="90"></a>
+    <nav aria-label="Menu principal">
+      <a href="index.html">Início</a><a href="about.html">Sobre nós</a><a href="index.html#lideranca">Liderança</a><a href="nossas-igrejas.html" aria-current="page">Nossas Igrejas</a><a href="index.html#contato">Contato</a>
+    </nav>
+  </header>
+  <main>
+    <section class="church-hero">
+      <div class="church-container">
+        <p class="eyebrow">Nossas Igrejas</p>
+        <h1>CONHEÇA A PAULISTANA<br>MAIS PERTO DE VOCÊ!</h1>
+        <p>Encontre seu lugar. Há uma família de fé esperando por você. Conheça nossas congregações e venha viver momentos de adoração, comunhão e crescimento na presença de Deus.</p>
+      </div>
+    </section>
+    <section id="busca" class="church-container church-directory" aria-label="Encontre uma congregação">
+      <form id="igrejas-filtros" class="church-filters" role="search">
+        <div class="church-search"><label for="igrejas-busca">Onde você procura uma igreja?</label><input type="search" id="igrejas-busca" name="q" placeholder="Nome, bairro, endereço ou CEP" autocomplete="off"></div>
+        <div><label for="igrejas-regional">Regional / região</label><select id="igrejas-regional" name="regional"><option value="">Todas as regiões</option></select></div>
+        <div><label for="igrejas-cidade">Cidade</label><select id="igrejas-cidade" name="cidade"><option value="">Todas as cidades</option></select></div>
+        <div class="church-filter-actions"><button type="button" id="igrejas-localizacao" class="button button-primary">Usar minha localização</button><button type="reset" class="button button-secondary">Limpar filtros</button></div>
+        <p class="church-location-hint">Permita o acesso à localização para ordenar pelas mais próximas. A distância é aproximada e calculada em linha reta.</p>
+      </form>
+      <p id="igrejas-localizacao-status" class="church-location-status" role="status" hidden></p>
+      <div class="church-results-heading"><div><p class="eyebrow">Uma família de fé espera por você</p><h2>Encontre sua congregação</h2></div><p id="igrejas-contagem" role="status" aria-live="polite"></p></div>
+      <p id="igrejas-cobertura" class="church-coverage" hidden></p>
+      <noscript><p class="church-notice">Ative o JavaScript para pesquisar as congregações ou <a href="https://drive.google.com/file/d/1BUXBbCUhnzteCJW2jQQWGNult9Kr73eE/view" target="_blank" rel="noopener noreferrer">consulte a relação de endereços</a>.</p></noscript>
+      <div id="igrejas-resultados" class="church-grid"></div>
+      <section id="igrejas-vazio" class="church-empty" hidden><h3>Nenhuma congregação encontrada</h3><p>Tente outro bairro, cidade ou CEP, ou limpe os filtros.</p><button type="button" id="igrejas-limpar-vazio" class="button button-secondary">Limpar filtros</button></section>
+      <div class="church-more"><button type="button" id="igrejas-mais" class="button button-secondary" hidden>Ver mais congregações</button></div>
+      <aside class="church-help"><div><h2>Precisa de ajuda para encontrar sua igreja?</h2><p>Fale com a Sede Nacional para informações sobre nossas congregações. Os contatos locais serão exibidos conforme disponibilizados.</p></div><a class="button button-primary" href="tel:+551138642547">Ligar para a sede: (11) 3864-2547</a></aside>
+      <p class="church-source">Endereços conforme a <a href="https://drive.google.com/file/d/1BUXBbCUhnzteCJW2jQQWGNult9Kr73eE/view" target="_blank" rel="noopener noreferrer">relação de congregações fornecida pela igreja</a>. Confirme os detalhes de sua visita com a liderança. Coordenadas: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© colaboradores do OpenStreetMap, ODbL</a>.</p>
+    </section>
+  </main>
+  <footer class="church-footer"><a href="index.html">AD Paulistana</a><p>Fé, comunhão e serviço. Uma igreja para sua família.</p><a href="index.html#contato">Contato com a Sede Nacional</a></footer>
+</body>
+</html>

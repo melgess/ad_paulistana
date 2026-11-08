@@ -726,6 +726,7 @@ try{initSocialSharing("348")} catch(e){}
 
 //Single page scroll js
 	$('.gc_single_index_menu ul li a').on('click' , function(e){
+	  if (!/^\d+$/.test($(this).attr('href'))) return;
 	  $('.gc_single_index_menu ul li').removeClass('active');
 	  $(this).parent().addClass('active');
 	  var target = $('[section-scroll='+$(this).attr('href')+']');
